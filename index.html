@@ -10,6 +10,7 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            position: relative;
         }
 
         header {
@@ -17,6 +18,23 @@
             color: #fff;
             text-align: center;
             padding: 1em;
+            position: relative;
+        }
+
+        header::before,
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000"%3E%3Cpath d="M12 2l1.84 5.63h5.96L14.81 9.5l1.87 5.5-6.12-4.63-6.06 4.56 1.83-5.66L2 7.47h6.04z"%3E%3C/path%3E%3C/svg%3E');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        header::before {
+            transform: rotate(180deg);
         }
 
         main {
@@ -26,17 +44,19 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            position: relative;
+            z-index: 1;
         }
 
         section {
             margin-bottom: 30px;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #000;
             padding-bottom: 15px;
         }
 
         h2 {
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
+            color: #000;
+            border-bottom: 2px solid #000;
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
@@ -47,6 +67,7 @@
             border-radius: 8px;
             margin-bottom: 15px;
             transition: transform 0.3s ease-in-out;
+            border: 2px solid #000;
         }
 
         img:hover {
@@ -66,25 +87,45 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1;
+        }
+
+        footer::before,
+        footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000"%3E%3Cpath d="M12 2l1.84 5.63h5.96L14.81 9.5l1.87 5.5-6.12-4.63-6.06 4.56 1.83-5.66L2 7.47h6.04z"%3E%3C/path%3E%3C/svg%3E');
+            opacity: 0.1;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Gatos Maravilhosos</h1>
+        <p>Descubra o fascinante mundo dos gatos - criaturas adoráveis, independentes e cheias de personalidade!</p>
     </header>
 
     <main>
         <section>
             <h2>Conheça nossos amigos felinos</h2>
             <img src="https://placekitten.com/800/400" alt="Gato Fofo">
-            <p>Os gatos são animais adoráveis, conhecidos por sua independência e carinho. Aqui, apresentamos alguns dos gatos mais maravilhosos que já existiram.</p>
+            <p>Os gatos são animais adoráveis, conhecidos por sua independência e carinho. Eles são companheiros incríveis e têm personalidades únicas. Aqui, apresentamos alguns dos gatos mais maravilhosos que já existiram.</p>
         </section>
 
         <section>
             <h2>Gatos Famosos</h2>
             <img src="https://placekitten.com/800/401" alt="Gato Celebridade">
-            <p>Alguns gatos se destacam na mídia por sua fofura e personalidade única. Conheça os gatos mais famosos do mundo e descubra por que eles conquistaram tantos corações.</p>
+            <p>Alguns gatos se destacam na mídia por sua fofura e personalidade única. Conheça os gatos mais famosos do mundo e descubra por que eles conquistaram tantos corações. Eles podem ser encontrados em filmes, comerciais e nas redes sociais, encantando pessoas de todas as idades.</p>
+        </section>
+
+        <section>
+            <h2>Curiosidades sobre Gatos</h2>
+            <img src="https://placekitten.com/800/402" alt="Gato Curioso">
+            <p>Você sabia que os gatos têm cerca de 32 músculos em cada orelha? Isso os ajuda a girar as orelhas em várias direções para captar sons de diferentes ângulos. Além disso, os gatos têm um incrível senso de equilíbrio e são conhecidos por suas habilidades de caça.</p>
         </section>
     </main>
 
@@ -93,3 +134,4 @@
     </footer>
 </body>
 </html>
+
